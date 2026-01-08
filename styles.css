@@ -79,3 +79,35 @@ body {
 .nav__menu {
     display: none; /* Oculto por defecto */
 }
+
+/* Estilos para el menú móvil cuando este desplegado */
+@media (max-width: 768px) {
+    .nav__menu {
+        display: block; /* Lo volvemos a mostrar*/ 
+        position: fixed;
+        top: 80px; /* Justo debajo del header */
+        left: -100%;/* Lo sacamos de la pantalla por la izquierda */
+        background-color: var(--bg-dark);
+        width: 100%;
+        height: 100vh;
+        padding: 40px;
+        transition: all 0.5s ease; /* Animación suave */
+        list-style: none;
+    }
+
+    .nav__item {
+        margin-bottom: 2rem;
+    }
+
+    .nav__link {
+        color: var(--text-light);
+        text-decoration: none;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+
+    /* Cuando el checkbox esté marcado, el menú entra en la pantalla */
+    .nav__check:checked ~ .nav__menu {
+        left: 0;
+    }
+}
