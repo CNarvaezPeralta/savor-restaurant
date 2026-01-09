@@ -23,6 +23,29 @@ body {
     line-height: 1.6;
 }
 
+/* Añade esto a tus estilos generales */
+ul {
+    list-style: none; /* Quita los puntos negros de todas las listas */
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado de todos los enlaces */
+    color: inherit;        /* Hace que el enlace use el color de su contenedor */
+}
+
+.nav__link {
+    /* Aseguramos que el enlace se vea blanco y limpio */
+    color: var(--text-light);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: var(--primary-color); /* El dorado al pasar el ratón */
+}
+
 /* Clase de utilidad para centrar el contenido en la pantalla */
 .container {
     max-width: 1200px;
@@ -60,7 +83,7 @@ body {
     color: var(--primary-color);
 }
 
-/* Menú hamburguesa */
+/* MENÚ HAMBURGUESA */
 .nav__toggle {
     display: flex;
     flex-direction: column;
@@ -80,7 +103,7 @@ body {
     display: none; /* Oculto por defecto */
 }
 
-/* Estilos para el menú móvil cuando este desplegado */
+/* ESTILOS PARA EL MOVIL PARA CUANDO ESTE DESPLEGADO */
 @media (max-width: 768px) {
     .nav__menu {
         display: block; /* Lo volvemos a mostrar*/ 
@@ -112,7 +135,7 @@ body {
     }
 }
 
-/* Desktop styles */
+/* DESKTOP STYLE */
 @media (min-width: 769px) {
     /* Escondemos el botón de 3 rayitas porque en PC no se usa */
     .nav__toggle {
