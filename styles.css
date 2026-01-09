@@ -5,8 +5,8 @@
     --text-light: #FFFFFF;    /* Blanco para textos principales */
     --text-muted: #a7a7a7;    /* Gris para textos secundarios */
 
-    --font-title: 'serif';      /* Tipografia titulos */
-    --font-body: 'sans-serif';  /*Tipografia para el contenido */
+    --font-title: 'Playfair Display';      /* Tipografia titulos */
+    --font-body: 'Poppins';  /*Tipografia para el contenido */
 }
 
 /* RESET */
@@ -126,6 +126,7 @@ a {
 }
 
 .hero__title {
+    font-family: var(--font-title);
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
