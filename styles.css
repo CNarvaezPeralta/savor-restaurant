@@ -107,7 +107,39 @@ body {
     }
 
     /* Cuando el checkbox esté marcado, el menú entra en la pantalla */
-    .nav__check:checked ~ .nav__menu {
+    .nav__check:checked ~ .header .nav__menu {
         left: 0;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+    /* Escondemos el botón de 3 rayitas porque en PC no se usa */
+    .nav__toggle {
+        display: none;
+    }
+
+    /* Mostramos el menú y lo ponemos en horizontal */
+    .nav__menu {
+        display: flex; 
+        gap: 2rem;
+        position: static; /* Quita el fixed del móvil */
+        width: auto;
+        height: auto;
+        background: none;
+        padding: 0;
+    }
+
+    .nav__item {
+        margin-bottom: 0;
+    }
+
+    .nav__link {
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+    .nav__link:hover {
+        color: var(--primary-color); /* El toque dorado al pasar el ratón */
     }
 }
